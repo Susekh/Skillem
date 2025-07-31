@@ -3,12 +3,10 @@ import { ArrowRight, Clock, Eye, Shield } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
-  CarouselItem,
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-const carouselimgs = [""];
 
 export default function Hero() {
   return (
@@ -53,9 +51,9 @@ export default function Hero() {
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <Carousel>
                   <CarouselContent>
-                    <CarouselItem>...</CarouselItem>
-                    <CarouselItem>...</CarouselItem>
-                    <CarouselItem>...</CarouselItem>
+                   {
+                    
+                   }
                   </CarouselContent>
                   <CarouselPrevious />
                   <CarouselNext />

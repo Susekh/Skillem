@@ -29,7 +29,7 @@ export default function Details() {
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Program Details</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Our comprehensive approach ensures participants receive well-rounded training that prepares them for success
-            in today's competitive landscape.
+            in todays competitive landscape.
           </p>
         </div>
 

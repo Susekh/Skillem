@@ -1,4 +1,5 @@
 import { Star, Quote } from "lucide-react"
+import Image from "next/image"
 
 export default function Testimonials() {
   const testimonials = [
@@ -42,7 +43,7 @@ export default function Testimonials() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">What Our Graduates Say</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our successful graduates have to say about their SKILLEM
+            Do not just take our word for it. Here is what our successful graduates have to say about their SKILLEM
             experience.
           </p>
         </div>
@@ -58,12 +59,14 @@ export default function Testimonials() {
 
               <Quote className="h-8 w-8 text-gray-300 mb-4" />
 
-              <p className="text-gray-700 mb-6 leading-relaxed">"{testimonial.content}"</p>
+              <p className="text-gray-700 mb-6 leading-relaxed">{testimonial.content}</p>
 
               <div className="flex items-center">
-                <img
+                <Image
                   src={testimonial.image || "/placeholder.svg"}
                   alt={testimonial.name}
+                  height={100}
+                  width={100}
                   className="w-12 h-12 rounded-full mr-4"
                 />
                 <div>
