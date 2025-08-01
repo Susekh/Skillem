@@ -1,12 +1,15 @@
+"use client"
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Eye, Shield } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
   CarouselContent,
+  CarouselItem,
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -45,15 +48,36 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Content - Hero Image */}
+          {/* Right Content - Hero Image Carousel */}
           <div className="relative">
             <div className="bg-gray-100 rounded-2xl p-8 shadow-2xl">
               <div className="bg-white rounded-xl p-6 shadow-lg">
-                <Carousel>
+                <Carousel
+                  plugins={[
+                    Autoplay({
+                      delay: 2000,
+                    }),
+                  ]}
+                >
                   <CarouselContent>
-                   {
-                    
-                   }
+                    {[
+                      "/images/slide-1.jpg",
+                      "/images/slide-2.jpg",
+                      "/images/slide-3.jpg",
+                    ].map((src, index) => (
+                      <CarouselItem
+                        key={index}
+                        className="relative w-full aspect-video overflow-hidden"
+                      >
+                        <Image
+                          fill
+                          quality={100}
+                          src={src}
+                          alt={`Slide ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </CarouselItem>
+                    ))}
                   </CarouselContent>
                   <CarouselPrevious />
                   <CarouselNext />
