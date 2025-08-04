@@ -8,10 +8,9 @@ export default function Contact() {
     <section id="contact" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Get In Touch</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">Let&#39;s Connect & Build Skills Together</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to start your skill development journey? Contact us today to learn more about our programs and how we
-            can help you achieve your career goals.
+            Whether you&#39;re a student, trainer, partner organization, or simply curious about our work, we&#39;d love to hear from you. Reach out to discuss your goals or explore collaboration opportunities!
           </p>
         </div>
 
@@ -19,7 +18,7 @@ export default function Contact() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Contact Information</h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -124,10 +123,11 @@ export default function Contact() {
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                 >
                   <option value="">Select a program</option>
-                  <option value="technical">Technical Skills Development</option>
-                  <option value="professional">Professional Skills Enhancement</option>
-                  <option value="combined">Combined Program</option>
-                  <option value="custom">Custom Training</option>
+                  <option value="technical">Core Skill Development</option>
+                  <option value="professional">Industry Immersion & Internships</option>
+                  <option value="combined">Social Sector Engagement</option>
+                  <option value="custom">Mentorship & Career Support</option>
+                  <option value="custom">Strategic Partnerships</option> {/* Added as an option */}
                 </select>
               </div>
 

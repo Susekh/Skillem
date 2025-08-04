@@ -20,12 +20,11 @@ export default function Hero() {
           <div className="space-y-8">
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                <span className="text-red-500">Develop skills</span>{" "}
-                <span className="text-gray-900">without looking back</span>
+                <span className="text-red-500">Shaping Skills</span>{" "}
+                <span className="text-gray-900">for a Stronger Tomorrow</span>
               </h1>
               <p className="text-xl text-gray-600 max-w-lg">
-                SKILLEM exists to make young professionals industry-ready,
-                without the traditional learning barriers.
+                Skillem equips young professionals with industry-relevant skills, empowering them for impactful careers in both corporate and community sectors.
               </p>
             </div>
 
@@ -34,7 +33,7 @@ export default function Hero() {
                 size="lg"
                 className="bg-black text-white hover:bg-gray-800 px-8"
               >
-                Get started
+                Explore Programs
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <Button
@@ -42,7 +41,7 @@ export default function Hero() {
                 variant="outline"
                 className="px-8 bg-transparent"
               >
-                View programs
+                Learn More
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
@@ -87,7 +86,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Feature Highlights */}
+        {/* Feature Highlights - Updated with program details */}
         <div className="mt-20 grid md:grid-cols-3 gap-8">
           <div className="flex items-center space-x-4">
             <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center">
@@ -95,10 +94,10 @@ export default function Hero() {
             </div>
             <div>
               <h3 className="font-semibold text-gray-900">
-                Fast skill development
+                Holistic Skill Development
               </h3>
               <p className="text-gray-600 text-sm">
-                Accelerated learning programs
+                Practical knowledge & behavioral confidence
               </p>
             </div>
           </div>
@@ -109,9 +108,11 @@ export default function Hero() {
             </div>
             <div>
               <h3 className="font-semibold text-gray-900">
-                Transparent progress
+                Real-World Industry Exposure
               </h3>
-              <p className="text-gray-600 text-sm">Clear milestone tracking</p>
+              <p className="text-gray-600 text-sm">
+                Internships, site visits & live projects
+              </p>
             </div>
           </div>
 
@@ -121,10 +122,10 @@ export default function Hero() {
             </div>
             <div>
               <h3 className="font-semibold text-gray-900">
-                Success guaranteed
+                Dedicated Mentorship & Support
               </h3>
               <p className="text-gray-600 text-sm">
-                Industry placement support
+                Career guidance & placement assistance
               </p>
             </div>
           </div>

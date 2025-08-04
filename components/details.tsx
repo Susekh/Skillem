@@ -1,52 +1,93 @@
-import { Code, Briefcase, Users2, Rocket } from "lucide-react"
+import { Code, Briefcase, Users2, Rocket, Award, Network } from "lucide-react" // Added Award and Network icons
 
 export default function Details() {
   const programs = [
     {
-      title: "Technical Skills Development",
-      description: "Comprehensive training in cutting-edge technologies and programming languages",
-      features: ["Full-stack development", "Data science & AI", "Cloud computing", "Mobile development"],
+      title: "Core Skill Development",
+      description: "Structured training modules covering essential skills for immediate job readiness.",
+      features: [
+        "Communication & Digital Tools",
+        "Workplace Behavior",
+        "Entrepreneurship Fundamentals",
+        "Domain-Specific Expertise"
+      ],
+      icon: <Code className="h-8 w-8 text-white" />,
       color: "bg-blue-500",
     },
     {
-      title: "Professional Skills Enhancement",
-      description: "Essential soft skills and business acumen for career success",
-      features: ["Leadership training", "Communication skills", "Project management", "Team collaboration"],
+      title: "Industry Immersion & Internships",
+      description: "Gain hands-on experience through real-world projects and direct industry connections.",
+      features: [
+        "Live Projects & Site Visits",
+        "Corporate Internships",
+        "Practical Application of Skills",
+        "Understanding Workplace Functions"
+      ],
+      icon: <Briefcase className="h-8 w-8 text-white" />,
       color: "bg-green-500",
     },
     {
-      title: "Industry Partnerships",
-      description: "Direct connections with leading companies and organizations",
-      features: ["Internship programs", "Job placement", "Mentorship", "Networking events"],
+      title: "Social Sector Engagement",
+      description: "Prepare to contribute meaningfully to community development and social change initiatives.",
+      features: [
+        "Community Development",
+        "NGO Work & Public Policy",
+        "Social Entrepreneurship",
+        "Impact-Driven Career Paths"
+      ],
+      icon: <Users2 className="h-8 w-8 text-white" />,
       color: "bg-purple-500",
     },
-  ]
+    { // New program card based on Mentorship & Career Support
+      title: "Mentorship & Career Support",
+      description: "Personalized guidance and extensive support to ensure your professional success.",
+      features: [
+        "Expert Mentorship",
+        "Resume & Interview Preparation",
+        "Personal Branding Workshops",
+        "Job Placement Assistance"
+      ],
+      icon: <Award className="h-8 w-8 text-white" />, // Using Award icon for career success
+      color: "bg-red-500", // New color for distinction
+    },
+    { // New program card based on Partnership & Collaboration
+      title: "Strategic Partnerships",
+      description: "Leverage our network of educational, corporate, and development organizations.",
+      features: [
+        "Industry-Aligned Curriculum",
+        "Job Linkages & Opportunities",
+        "Diverse Growth Paths",
+        "Continuous Learning Resources"
+      ],
+      icon: <Network className="h-8 w-8 text-white" />, // Using Network icon for collaborations
+      color: "bg-yellow-500", // New color for distinction
+    },
+  ];
 
   return (
     <section id="details" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Program Details</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Programs & Pathways</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our comprehensive approach ensures participants receive well-rounded training that prepares them for success
-            in todays competitive landscape.
+            SKILLEM&#39;s comprehensive approach ensures participants receive well-rounded training and support,
+            preparing them for success in today&#39;s dynamic professional landscape.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        {/* Changed grid layout to display 3 or 2 columns responsively for 5 cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 mb-16">
           {programs.map((program, index) => (
-            <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col">
               <div className={`w-16 h-16 ${program.color} rounded-2xl flex items-center justify-center mb-6`}>
-                {index === 0 && <Code className="h-8 w-8 text-white" />}
-                {index === 1 && <Briefcase className="h-8 w-8 text-white" />}
-                {index === 2 && <Users2 className="h-8 w-8 text-white" />}
+                {program.icon} {/* Using the icon property directly */}
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">{program.title}</h3>
-              <p className="text-gray-600 mb-6">{program.description}</p>
-              <ul className="space-y-3">
+              <p className="text-gray-600 mb-6 flex-grow">{program.description}</p> {/* flex-grow to unify card height */}
+              <ul className="space-y-3 mt-auto"> {/* Push features to the bottom */}
                 {program.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center text-gray-700">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {feature}
                   </li>
                 ))}
@@ -66,8 +107,7 @@ export default function Details() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Accelerated Learning</h4>
                   <p className="text-gray-600">
-                    Our intensive programs are designed to fast-track your skill development without compromising on
-                    quality.
+                    Our intensive programs are designed to fast-track your skill development without compromising on quality or depth.
                   </p>
                 </div>
               </div>
@@ -79,7 +119,7 @@ export default function Details() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Expert Mentorship</h4>
                   <p className="text-gray-600">
-                    Learn from industry veterans who bring real-world experience and insights to your learning journey.
+                    Learn directly from industry veterans who bring invaluable real-world experience and insights to your journey.
                   </p>
                 </div>
               </div>
@@ -89,9 +129,9 @@ export default function Details() {
                   <Briefcase className="h-4 w-4 text-red-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Career Support</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">Holistic Career Support</h4>
                   <p className="text-gray-600">
-                    From resume building to interview preparation, we support you throughout your career transition.
+                    From initial skill enhancement to resume building, interview preparation, and job placement, we support every step.
                   </p>
                 </div>
               </div>
