@@ -42,14 +42,7 @@ export default function Home() {
       </motion.section>
 
       {/* Details */}
-      <motion.section
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-      >
         <Details />
-      </motion.section>
 
       {/* Testimonials */}
       <motion.section
