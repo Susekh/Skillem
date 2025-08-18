@@ -24,7 +24,7 @@ export default function Hero() {
                 <span className="text-gray-900">for a Stronger Tomorrow</span>
               </h1>
               <p className="text-xl text-gray-600 max-w-lg">
-                Skillem equips young professionals with industry-relevant skills, empowering them for impactful careers in both corporate and community sectors.
+                SKILLEM SERVICES equips young professionals with industry-relevant skills, empowering them for impactful careers in both corporate and community sectors.
               </p>
             </div>
 

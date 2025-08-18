@@ -1,8 +1,9 @@
 "use client"
 
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
+import { Menu, X } from "lucide-react"
+import Image from "next/image"
 
 interface NavLink {
   href: string
@@ -12,14 +13,15 @@ interface NavLink {
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState<string>("")
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false)
 
   useEffect(() => {
     const sections: string[] = ["about", "goals", "details", "testimonials"]
-    
+
     const observerOptions = {
       root: null,
-      rootMargin: "-20% 0px -80% 0px", // Trigger when section is 20% from top
-      threshold: 0
+      rootMargin: "-20% 0px -80% 0px",
+      threshold: 0,
     }
 
     const observer = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
@@ -30,21 +32,15 @@ export default function Navbar() {
       })
     }, observerOptions)
 
-    // Observe all sections
     sections.forEach((sectionId: string) => {
       const element: HTMLElement | null = document.getElementById(sectionId)
-      if (element) {
-        observer.observe(element)
-      }
+      if (element) observer.observe(element)
     })
 
-    // Cleanup
     return () => {
       sections.forEach((sectionId: string) => {
         const element: HTMLElement | null = document.getElementById(sectionId)
-        if (element) {
-          observer.unobserve(element)
-        }
+        if (element) observer.unobserve(element)
       })
     }
   }, [])
@@ -53,15 +49,16 @@ export default function Navbar() {
     e.preventDefault()
     const targetId: string = href.replace("#", "")
     const element: HTMLElement | null = document.getElementById(targetId)
-    
+
     if (element) {
-      const navbarHeight: number = 64 // Height of fixed navbar
+      const navbarHeight: number = 64
       const elementPosition: number = element.offsetTop - navbarHeight
-      
+
       window.scrollTo({
         top: elementPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       })
+      setIsMobileMenuOpen(false) // close menu after clicking
     }
   }
 
@@ -69,7 +66,7 @@ export default function Navbar() {
     { href: "#about", label: "Mission", id: "about" },
     { href: "#goals", label: "Process", id: "goals" },
     { href: "#details", label: "Work", id: "details" },
-    { href: "#testimonials", label: "Reviews", id: "testimonials" }
+    { href: "#testimonials", label: "Reviews", id: "testimonials" },
   ]
 
   return (
@@ -78,15 +75,20 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <div className="w-8 h-8 bg-black rounded-sm flex items-center justify-center">
-                <div className="w-4 h-4 bg-white rounded-sm"></div>
-              </div>
+            <div className="w-10 h-10 rounded-sm flex items-center justify-center">
+              <Image
+                height={100}
+                width={100}
+                alt="SKILLEM SERVICES icon"
+                src={'/favicon.png'}
+              />
             </div>
-            <span className="ml-3 text-xl font-bold text-gray-900">SKILLEM</span>
+            <span className="ml-3 text-xl font-bold text-gray-900">
+              SKILLEM SERVICES
+            </span>
           </div>
 
-          {/* Navigation Links */}
+          {/* Desktop Nav */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navLinks.map((link: NavLink) => (
@@ -106,15 +108,39 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="flex items-center space-x-4">
-            <div className="w-8 h-8 bg-gray-200 rounded-full"></div>
-            <Button asChild className="bg-black text-white hover:bg-gray-800">
-              <Link href="#contact">Book a call</Link>
-            </Button>
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 rounded-md text-gray-700 hover:text-gray-900 focus:outline-none"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Mobile Nav Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-white/95 backdrop-blur-sm border-t border-gray-100 shadow-sm">
+          <div className="px-4 py-4 space-y-2">
+            {navLinks.map((link: NavLink) => (
+              <Link
+                key={link.id}
+                href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  activeSection === link.id
+                    ? "text-gray-900 bg-gray-100"
+                    : "text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
   )
 }

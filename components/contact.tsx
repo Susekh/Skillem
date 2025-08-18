@@ -1,16 +1,20 @@
-import { MapPin, Phone, Mail, Clock } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function Contact() {
   return (
     <section id="contact" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Let&#39;s Connect & Build Skills Together</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            Let&#39;s Connect & Build Skills Together
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Whether you&#39;re a student, trainer, partner organization, or simply curious about our work, we&#39;d love to hear from you. Reach out to discuss your goals or explore collaboration opportunities!
+            Whether you&#39;re a student, trainer, partner organization, or
+            simply curious about our work, we&#39;d love to hear from you. Reach
+            out to discuss your goals or explore collaboration opportunities!
           </p>
         </div>
 
@@ -18,20 +22,25 @@ export default function Contact() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Contact Information</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Our Contact Information
+              </h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-6 w-6 text-red-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Address</h4>
+                    <h4 className="font-semibold text-gray-900 mb-1">
+                      Address
+                    </h4>
                     <p className="text-gray-600">
-                      123 Skill Development Center
+                      Address: F-2, Chandaka Industrial Estate In front of
+                      Infocity, Infocity
                       <br />
-                      Innovation District
+                      Chandrasekharpur, Bhubaneshwar
                       <br />
-                      Mumbai, Maharashtra 400001
+                      Odisha - 751024
                     </p>
                   </div>
                 </div>
@@ -42,8 +51,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
-                    <p className="text-gray-600">+91 98765 43210</p>
-                    <p className="text-gray-600">+91 87654 32109</p>
+                    <p className="text-gray-600">+91 9439173220</p>
                   </div>
                 </div>
 
@@ -54,7 +62,9 @@ export default function Contact() {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
                     <p className="text-gray-600">info@skillemservices.com</p>
-                    <p className="text-gray-600">admissions@skillemservices.com</p>
+                    <p className="text-gray-600">
+                      admissions@skillemservices.com
+                    </p>
                   </div>
                 </div>
 
@@ -63,9 +73,15 @@ export default function Contact() {
                     <Clock className="h-6 w-6 text-red-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Office Hours</h4>
-                    <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                    <p className="text-gray-600">Saturday: 10:00 AM - 4:00 PM</p>
+                    <h4 className="font-semibold text-gray-900 mb-1">
+                      Office Hours
+                    </h4>
+                    <p className="text-gray-600">
+                      Monday - Friday: 9:00 AM - 6:00 PM
+                    </p>
+                    <p className="text-gray-600">
+                      Saturday: 10:00 AM - 4:00 PM
+                    </p>
                     <p className="text-gray-600">Sunday: Closed</p>
                   </div>
                 </div>
@@ -73,27 +89,40 @@ export default function Contact() {
             </div>
 
             <div className="bg-gray-900 rounded-2xl p-8 text-white">
-              <h4 className="text-xl font-bold mb-4">Ready to Transform Your Career?</h4>
+              <h4 className="text-xl font-bold mb-4">
+                Ready to Transform Your Career?
+              </h4>
               <p className="text-gray-300 mb-6">
-                Schedule a free consultation to discuss your career goals and find the perfect program for you.
+                Schedule a free consultation to discuss your career goals and
+                find the perfect program for you.
               </p>
-              <Button className="bg-red-500 text-white hover:bg-red-600 w-full">Schedule Free Consultation</Button>
+              <Button className="bg-red-500 text-white hover:bg-red-600 w-full">
+                Schedule Free Consultation
+              </Button>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              Send us a Message
+            </h3>
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="firstName"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     First Name
                   </label>
                   <Input id="firstName" placeholder="Enter your first name" />
                 </div>
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="lastName"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Last Name
                   </label>
                   <Input id="lastName" placeholder="Enter your last name" />
@@ -101,21 +130,34 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Email Address
                 </label>
-                <Input id="email" type="email" placeholder="Enter your email address" />
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="Enter your email address"
+                />
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Phone Number
                 </label>
                 <Input id="phone" placeholder="Enter your phone number" />
               </div>
 
               <div>
-                <label htmlFor="program" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="program"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Program of Interest
                 </label>
                 <select
@@ -124,15 +166,21 @@ export default function Contact() {
                 >
                   <option value="">Select a program</option>
                   <option value="technical">Core Skill Development</option>
-                  <option value="professional">Industry Immersion & Internships</option>
+                  <option value="professional">
+                    Industry Immersion & Internships
+                  </option>
                   <option value="combined">Social Sector Engagement</option>
                   <option value="custom">Mentorship & Career Support</option>
-                  <option value="custom">Strategic Partnerships</option> {/* Added as an option */}
+                  <option value="custom">Strategic Partnerships</option>{" "}
+                  {/* Added as an option */}
                 </select>
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Message
                 </label>
                 <Textarea
@@ -142,7 +190,10 @@ export default function Contact() {
                 />
               </div>
 
-              <Button type="submit" className="w-full bg-red-500 text-white hover:bg-red-600">
+              <Button
+                type="submit"
+                className="w-full bg-red-500 text-white hover:bg-red-600"
+              >
                 Send Message
               </Button>
             </form>
@@ -150,5 +201,5 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }

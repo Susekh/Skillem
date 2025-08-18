@@ -7,7 +7,7 @@ export default function Testimonials() {
       name: "Sarah Johnson",
       role: "Software Developer at TechCorp",
       content:
-        "SKILLEM transformed my career completely. The hands-on training and mentorship helped me land my dream job in just 6 months.",
+        "SKILLEM SERVICES transformed my career completely. The hands-on training and mentorship helped me land my dream job in just 6 months.",
       rating: 5,
       image: "/placeholder.svg?height=60&width=60",
     },
@@ -31,7 +31,7 @@ export default function Testimonials() {
       name: "David Rodriguez",
       role: "UX Designer at CreativeStudio",
       content:
-        "The industry connections and networking opportunities opened doors I never thought possible. Highly recommend SKILLEM!",
+        "The industry connections and networking opportunities opened doors I never thought possible. Highly recommend SKILLEM SERVICES!",
       rating: 5,
       image: "/placeholder.svg?height=60&width=60",
     },
@@ -43,7 +43,7 @@ export default function Testimonials() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">What Our Graduates Say</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Do not just take our word for it. Here is what our successful graduates have to say about their SKILLEM
+            Do not just take our word for it. Here is what our successful graduates have to say about their SKILLEM SERVICES
             experience.
           </p>
         </div>
