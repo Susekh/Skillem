@@ -1,68 +1,81 @@
-import { Code, Briefcase, Users2, Rocket, Award, Network } from "lucide-react" // Added Award and Network icons
+import { Code, Briefcase, Users2, Rocket, Award, Network, FlaskConical } from "lucide-react" // Added Award and Network icons
 
 export default function Details() {
   const programs = [
-    {
-      title: "Core Skill Development",
-      description: "Structured training modules covering essential skills for immediate job readiness.",
-      features: [
-        "Communication & Digital Tools",
-        "Workplace Behavior",
-        "Entrepreneurship Fundamentals",
-        "Domain-Specific Expertise"
-      ],
-      icon: <Code className="h-8 w-8 text-white" />,
-      color: "bg-blue-500",
-    },
-    {
-      title: "Industry Immersion & Internships",
-      description: "Gain hands-on experience through real-world projects and direct industry connections.",
-      features: [
-        "Live Projects & Site Visits",
-        "Corporate Internships",
-        "Practical Application of Skills",
-        "Understanding Workplace Functions"
-      ],
-      icon: <Briefcase className="h-8 w-8 text-white" />,
-      color: "bg-green-500",
-    },
-    {
-      title: "Social Sector Engagement",
-      description: "Prepare to contribute meaningfully to community development and social change initiatives.",
-      features: [
-        "Community Development",
-        "NGO Work & Public Policy",
-        "Social Entrepreneurship",
-        "Impact-Driven Career Paths"
-      ],
-      icon: <Users2 className="h-8 w-8 text-white" />,
-      color: "bg-purple-500",
-    },
-    { // New program card based on Mentorship & Career Support
-      title: "Mentorship & Career Support",
-      description: "Personalized guidance and extensive support to ensure your professional success.",
-      features: [
-        "Expert Mentorship",
-        "Resume & Interview Preparation",
-        "Personal Branding Workshops",
-        "Job Placement Assistance"
-      ],
-      icon: <Award className="h-8 w-8 text-white" />, // Using Award icon for career success
-      color: "bg-red-500", // New color for distinction
-    },
-    { // New program card based on Partnership & Collaboration
-      title: "Strategic Partnerships",
-      description: "Leverage our network of educational, corporate, and development organizations.",
-      features: [
-        "Industry-Aligned Curriculum",
-        "Job Linkages & Opportunities",
-        "Diverse Growth Paths",
-        "Continuous Learning Resources"
-      ],
-      icon: <Network className="h-8 w-8 text-white" />, // Using Network icon for collaborations
-      color: "bg-yellow-500", // New color for distinction
-    },
-  ];
+  {
+    title: "Core Skill Development",
+    description: "Structured training modules covering essential skills for immediate job readiness.",
+    features: [
+      "Communication & Digital Tools",
+      "Workplace Behavior",
+      "Entrepreneurship Fundamentals",
+      "Domain-Specific Expertise"
+    ],
+    icon: <Code className="h-8 w-8 text-white" />,
+    color: "bg-blue-500",
+  },
+  {
+    title: "Industry Immersion & Internships",
+    description: "Gain hands-on experience through real-world projects and direct industry connections.",
+    features: [
+      "Live Projects & Site Visits",
+      "Corporate Internships",
+      "Practical Application of Skills",
+      "Understanding Workplace Functions"
+    ],
+    icon: <Briefcase className="h-8 w-8 text-white" />,
+    color: "bg-green-500",
+  },
+  {
+    title: "Social Sector Engagement",
+    description: "Prepare to contribute meaningfully to community development and social change initiatives.",
+    features: [
+      "Community Development",
+      "NGO Work & Public Policy",
+      "Social Entrepreneurship",
+      "Impact-Driven Career Paths"
+    ],
+    icon: <Users2 className="h-8 w-8 text-white" />,
+    color: "bg-purple-500",
+  },
+  {
+    title: "Mentorship & Career Support",
+    description: "Personalized guidance and extensive support to ensure your professional success.",
+    features: [
+      "Expert Mentorship",
+      "Resume & Interview Preparation",
+      "Personal Branding Workshops",
+      "Job Placement Assistance"
+    ],
+    icon: <Award className="h-8 w-8 text-white" />,
+    color: "bg-red-500",
+  },
+  {
+    title: "Strategic Partnerships",
+    description: "Leverage our network of educational, corporate, and development organizations.",
+    features: [
+      "Industry-Aligned Curriculum",
+      "Job Linkages & Opportunities",
+      "Diverse Growth Paths",
+      "Continuous Learning Resources"
+    ],
+    icon: <Network className="h-8 w-8 text-white" />,
+    color: "bg-yellow-500",
+  },
+  { 
+    title: "Innovation & Research",
+    description: "Fostering creativity and innovation to prepare learners for emerging global challenges.",
+    features: [
+      "Research-Oriented Projects",
+      "Innovation Labs & Hackathons",
+      "Creative Problem-Solving",
+      "Exposure to Global Trends"
+    ],
+    icon: <FlaskConical className="h-8 w-8 text-white" />, 
+    color: "bg-indigo-500",
+  }
+];
+
 
   return (
     <section id="details" className="py-20 bg-gray-50">

@@ -5,38 +5,44 @@ import { Textarea } from "@/components/ui/textarea";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section
+      id="contact"
+      className="py-24 bg-gradient-to-b from-gray-50 via-white to-gray-50"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+        {/* Heading */}
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
             Let&#39;s Connect & Build Skills Together
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Whether you&#39;re a student, trainer, partner organization, or
             simply curious about our work, we&#39;d love to hear from you. Reach
             out to discuss your goals or explore collaboration opportunities!
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-14 items-start">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-10">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <h3 className="text-2xl font-bold text-gray-900 mb-8">
                 Our Contact Information
               </h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-red-600" />
+
+              <div className="space-y-8">
+                {/* Address */}
+                <div className="flex items-start space-x-5">
+                  <div className="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center shadow-sm">
+                    <MapPin className="h-7 w-7 text-red-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">
+                    <h4 className="font-semibold text-gray-900 text-lg mb-1">
                       Address
                     </h4>
-                    <p className="text-gray-600">
-                      Address: F-2, Chandaka Industrial Estate In front of
-                      Infocity, Infocity
+                    <p className="text-gray-600 leading-relaxed">
+                      F-2, Chandaka Industrial Estate In front of Infocity,
+                      Infocity
                       <br />
                       Chandrasekharpur, Bhubaneshwar
                       <br />
@@ -45,22 +51,28 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-6 w-6 text-red-600" />
+                {/* Phone */}
+                <div className="flex items-start space-x-5">
+                  <div className="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center shadow-sm">
+                    <Phone className="h-7 w-7 text-red-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
+                    <h4 className="font-semibold text-gray-900 text-lg mb-1">
+                      Phone
+                    </h4>
                     <p className="text-gray-600">+91 9439173220</p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Mail className="h-6 w-6 text-red-600" />
+                {/* Email */}
+                <div className="flex items-start space-x-5">
+                  <div className="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center shadow-sm">
+                    <Mail className="h-7 w-7 text-red-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
+                    <h4 className="font-semibold text-gray-900 text-lg mb-1">
+                      Email
+                    </h4>
                     <p className="text-gray-600">info@skillemservices.com</p>
                     <p className="text-gray-600">
                       admissions@skillemservices.com
@@ -68,71 +80,81 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Clock className="h-6 w-6 text-red-600" />
+                {/* Office Hours */}
+                <div className="flex items-start space-x-5">
+                  <div className="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center shadow-sm">
+                    <Clock className="h-7 w-7 text-red-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">
+                    <h4 className="font-semibold text-gray-900 text-lg mb-1">
                       Office Hours
                     </h4>
                     <p className="text-gray-600">
                       Monday - Friday: 9:00 AM - 6:00 PM
                     </p>
-                    <p className="text-gray-600">
-                      Saturday: 10:00 AM - 4:00 PM
-                    </p>
+                    <p className="text-gray-600">Saturday: 10:00 AM - 4:00 PM</p>
                     <p className="text-gray-600">Sunday: Closed</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gray-900 rounded-2xl p-8 text-white">
-              <h4 className="text-xl font-bold mb-4">
+            {/* CTA Card */}
+            <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-10 text-white shadow-xl text-center">
+              <h4 className="text-2xl font-bold mb-4">
                 Ready to Transform Your Career?
               </h4>
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-300 mb-8 leading-relaxed">
                 Schedule a free consultation to discuss your career goals and
                 find the perfect program for you.
               </p>
-              <Button className="bg-red-500 text-white hover:bg-red-600 w-full">
+              <Button className="bg-red-500 text-white hover:bg-red-600 px-6 py-3 text-lg rounded-xl shadow-lg">
                 Schedule Free Consultation
               </Button>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+          <div className="bg-white rounded-2xl p-10 shadow-xl border border-gray-100">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">
               Send us a Message
             </h3>
-            <form className="space-y-6">
+            <form className="space-y-7">
+              {/* Name fields */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label
                     htmlFor="firstName"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-gray-700 mb-2"
                   >
                     First Name
                   </label>
-                  <Input id="firstName" placeholder="Enter your first name" />
+                  <Input
+                    id="firstName"
+                    placeholder="Enter your first name"
+                    className="rounded-lg border-gray-300 focus:ring-red-500"
+                  />
                 </div>
                 <div>
                   <label
                     htmlFor="lastName"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-gray-700 mb-2"
                   >
                     Last Name
                   </label>
-                  <Input id="lastName" placeholder="Enter your last name" />
+                  <Input
+                    id="lastName"
+                    placeholder="Enter your last name"
+                    className="rounded-lg border-gray-300 focus:ring-red-500"
+                  />
                 </div>
               </div>
 
+              {/* Email */}
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-semibold text-gray-700 mb-2"
                 >
                   Email Address
                 </label>
@@ -140,29 +162,36 @@ export default function Contact() {
                   id="email"
                   type="email"
                   placeholder="Enter your email address"
+                  className="rounded-lg border-gray-300 focus:ring-red-500"
                 />
               </div>
 
+              {/* Phone */}
               <div>
                 <label
                   htmlFor="phone"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-semibold text-gray-700 mb-2"
                 >
                   Phone Number
                 </label>
-                <Input id="phone" placeholder="Enter your phone number" />
+                <Input
+                  id="phone"
+                  placeholder="Enter your phone number"
+                  className="rounded-lg border-gray-300 focus:ring-red-500"
+                />
               </div>
 
+              {/* Program */}
               <div>
                 <label
                   htmlFor="program"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-semibold text-gray-700 mb-2"
                 >
                   Program of Interest
                 </label>
                 <select
                   id="program"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
                 >
                   <option value="">Select a program</option>
                   <option value="technical">Core Skill Development</option>
@@ -171,31 +200,35 @@ export default function Contact() {
                   </option>
                   <option value="combined">Social Sector Engagement</option>
                   <option value="custom">Mentorship & Career Support</option>
-                  <option value="custom">Strategic Partnerships</option>{" "}
-                  {/* Added as an option */}
+                  <option value="custom">Strategic Partnerships</option>
                 </select>
               </div>
 
+              {/* Message */}
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-semibold text-gray-700 mb-2"
                 >
                   Message
                 </label>
                 <Textarea
                   id="message"
                   placeholder="Tell us about your career goals and how we can help you..."
-                  rows={4}
+                  rows={5}
+                  className="rounded-lg border-gray-300 focus:ring-red-500"
                 />
               </div>
 
-              <Button
-                type="submit"
-                className="w-full bg-red-500 text-white hover:bg-red-600"
-              >
-                Send Message
-              </Button>
+              {/* Submit */}
+              <div className="flex justify-center">
+                <Button
+                  type="submit"
+                  className="bg-red-500 text-white hover:bg-red-600 px-8 py-3 text-lg rounded-xl shadow-lg"
+                >
+                  Send Message
+                </Button>
+              </div>
             </form>
           </div>
         </div>

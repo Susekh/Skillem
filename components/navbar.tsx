@@ -16,11 +16,12 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false)
 
   useEffect(() => {
-    const sections: string[] = ["about", "goals", "details", "testimonials"]
+    // Sections to track in scroll spy
+    const sections: string[] = ["about", "details", "testimonials", "contact"]
 
     const observerOptions = {
       root: null,
-      rootMargin: "-20% 0px -80% 0px",
+      rootMargin: "-30% 0px -70% 0px", // Better accuracy
       threshold: 0,
     }
 
@@ -51,22 +52,22 @@ export default function Navbar() {
     const element: HTMLElement | null = document.getElementById(targetId)
 
     if (element) {
-      const navbarHeight: number = 64
+      const navbarHeight: number = 64 // adjust if navbar height changes
       const elementPosition: number = element.offsetTop - navbarHeight
 
       window.scrollTo({
         top: elementPosition,
         behavior: "smooth",
       })
-      setIsMobileMenuOpen(false) // close menu after clicking
+      setIsMobileMenuOpen(false)
     }
   }
 
   const navLinks: NavLink[] = [
-    { href: "#about", label: "Mission", id: "about" },
-    { href: "#goals", label: "Process", id: "goals" },
-    { href: "#details", label: "Work", id: "details" },
+    { href: "#about", label: "About", id: "about" },
+    { href: "#details", label: "Details", id: "details" },
     { href: "#testimonials", label: "Reviews", id: "testimonials" },
+    { href: "#contact", label: "Contact", id: "contact" },
   ]
 
   return (
