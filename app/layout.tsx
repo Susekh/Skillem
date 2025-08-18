@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Skillem services",
-  description: "SKILLEM SERVICES equips young professionals with industry-relevant skills",
+  description: "Equips young professionals with industry-relevant skills",
   icons : './favicon.png'
 };
 
